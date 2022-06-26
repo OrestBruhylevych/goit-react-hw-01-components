@@ -1,13 +1,17 @@
 
-import Profile from "./profile/profile";
-import StatisticsList from "./statisticsList/statisticsList";
-import FriendList from "./friendList/FriendList";
-import TransactionHistory from "./transactionHistory/transactionHistory";
+// import Profile from "./profile/profile";
+// import StatisticsList from "./statisticsList/statisticsList";
+// import FriendList from "./friendList/FriendList";
+// import TransactionHistory from "./transactionHistory/transactionHistory";
 
 import userInfo from '../data/user';
-import data from '../data/data';
-import friends from "../data/friends";
-import transactionData from "../data/transactions";
+// import data from '../data/data';
+// import friends from "../data/friends";
+// import transactionData from "../data/transactions";
+
+import { Box } from "./box/Box";
+// import { ProfileAvatar } from "./profile/ProfileAvatar";
+import { Profile } from "./profile/Profile.jsx";
 
 
 
@@ -15,9 +19,11 @@ import transactionData from "../data/transactions";
 
 export const App = () => {
   return (
-    <>
-      
-       <Profile
+    <Box as="main" background='blue' >
+      {/* <ProfileAvatar userInfo={userInfo}></ProfileAvatar> */}
+      <Profile userInfo={userInfo}></Profile>
+
+      {/* <Profile
           username={userInfo.username}
           tag={userInfo.tag}
           location={userInfo.location}
@@ -30,8 +36,11 @@ export const App = () => {
       
       <FriendList friends={friends} />
 
-      <TransactionHistory items={transactionData} />
+      <TransactionHistory items={transactionData} /> */}
+    </Box>
+      
+       
 
-    </>
+    
   );
 };

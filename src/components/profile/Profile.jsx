@@ -26,7 +26,7 @@ const StyledText = styled(StyledUserName)`
   color: ${p => p.theme.colors.secondary};
 `;
 
-const StyledListInfo = styled.ul`
+export const  StyledListInfo = styled.ul`
 
   display:flex;
   list-style: none;
@@ -35,9 +35,9 @@ const StyledListInfo = styled.ul`
 
 `;
 
-const StyledListInfoItem = styled.li`
+export const StyledListInfoItem = styled.li`
 
-width: 100%;
+  width: 100%;
   display: block;
   justify-content: space-between;
   border: 2px solid ${p => p.theme.colors.black};
@@ -57,7 +57,7 @@ export const Profile = ({userInfo}) => {
 
     return (
         
-<Box  ml='auto' mr='auto' width='400px' p={4} className="profile">
+<Box  ml='auto' mr='auto' width='400px' boxShadow='10px 5px 5px red' className="profile">
   <Box as='div'  background='#fff' p={4} className="description">
     <StyledAvatar
       src={avatar}

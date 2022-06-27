@@ -1,7 +1,8 @@
 
 import PropTypes from 'prop-types';
 
-import FriendListItem from "components/friendListItem/FriendListItem";
+import FriendListItem from "components/friendList/FriendListItem";
+import { Box } from 'components/box/Box';
 
 export default function FriendList({friends}) {
 
@@ -13,9 +14,9 @@ export default function FriendList({friends}) {
 
 
     return (
-        <ul className="friend-list">
-                {friendsItem}
-        </ul>
+        <Box as="ul" mt='50px' width='400px' ml='auto' mr='auto' pl='0' className="friend-list">
+            {friendsItem}
+        </Box>
     );
 
 };

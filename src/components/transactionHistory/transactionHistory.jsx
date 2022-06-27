@@ -1,7 +1,10 @@
 
 import PropTypes from 'prop-types';
 
-import TransactionHistoryItem from "components/transactionHistoryItem/transactionHistoryItem";
+import TransactionHistoryItem from "components/transactionHistory/transactionHistoryItem";
+import { Box } from 'components/box/Box';
+
+
 
 
 export default function TransactionHistory({items}) {
@@ -15,19 +18,19 @@ export default function TransactionHistory({items}) {
 
 
     return (
-        <table className="transaction-history">
-            <thead>
+        <Box  as='table'  background='#fff' mt='50px'  ml='auto' mr='auto' width='400px' className="transaction-history">
+            <Box as='thead' background='#15c7df' >
                 <tr>
                     <th>Type</th>
                     <th>Amount</th>
                     <th>Currency</th>
                 </tr>
-            </thead>
+            </Box>
 
             <tbody>
                 {transactionItems}
             </tbody>
-        </table>
+        </Box>
     );
 };
 

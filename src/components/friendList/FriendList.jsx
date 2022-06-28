@@ -22,5 +22,5 @@ export default function FriendList({friends}) {
 };
 
 FriendList.propTypes = {
-    friends: PropTypes.arrayOf(PropTypes.shape),
+    friends: PropTypes.arrayOf(PropTypes.shape).isRequired,
 }

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 
-import {StyledListInfo} from '../profile/Profile'
+import {StyledListInfo} from '../profile/Profile.styled'
 
 import StatisticListItem from './statisticListItem';
 
@@ -52,5 +52,5 @@ export default function StatisticsList({ title, stats }) {
 
 StatisticsList.propTypes = {
   title: PropTypes.string,
-  stats: PropTypes.arrayOf(PropTypes.shape)
+  stats: PropTypes.arrayOf(PropTypes.shape).isRequired
 }

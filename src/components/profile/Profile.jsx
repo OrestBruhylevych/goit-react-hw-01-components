@@ -1,58 +1,17 @@
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 
 import {Box} from "../box/Box"
+import {
+  StyledAvatar,
+  StyledUserName,
+  StyledText,
+  StyledListInfo,
+  StyledListInfoItem,
+  StyledListInfoItemSpan
+} from './Profile.styled';
 
-
-const StyledAvatar = styled.img`
-    display: block;
-    border-radius: 50%;
-    width: 340px;
-    margin-left: auto;
-    margin-right: auto;
-`;
-
-const StyledUserName = styled.p`
-    display: flex;
-    border-radius: 50%;
-    width: 340px;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
-    color: ${p => p.theme.colors.black};
-`;
-
-const StyledText = styled(StyledUserName)`
-  color: ${p => p.theme.colors.secondary};
-`;
-
-export const  StyledListInfo = styled.ul`
-
-  display:flex;
-  list-style: none;
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
-
-`;
-
-export const StyledListInfoItem = styled.li`
-
-  width: 100%;
-  display: block;
-  justify-content: space-between;
-  border: 2px solid ${p => p.theme.colors.black};
-  background-color: ${p => p.theme.colors.secondary};
-`;
-
-const StyledListInfoItemSpan = styled.span`
-  display: flex;
-  justify-content: center;
-
-`;
-
-
-export const Profile = ({userInfo}) => {
-    const { username, tag, location, avatar, stats } = userInfo;
+export const Profile = (props) => {
+    const { username, tag, location, avatar, stats } = props;
     const { followers, views, likes } = stats;
 
     return (
@@ -88,9 +47,9 @@ export const Profile = ({userInfo}) => {
 }
 
 Profile.propTypes = {
-  username: PropTypes.string,
-  tag: PropTypes.string,
-  location: PropTypes.string,
-  avatar: PropTypes.string,
-  stats: PropTypes.object
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  stats: PropTypes.object.isRequired
 }
